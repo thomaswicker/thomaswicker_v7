@@ -1,0 +1,172 @@
+/*
+____   ___  ____ _____ ____
+|  _ \ / _ \/ ___|_   _/ ___|
+| |_) | | | \___ \ | | \___ \
+|  __/| |_| |___) || |  ___) |
+|_|    \___/|____/ |_| |____/
+
+*/
+
+
+/* ==========================================================================
+%% Styling for Posts %%
+========================================================================== */
+
+ul.post-list {
+
+}
+
+// Styling for Categories Side Bar
+.cat-item {
+  float: left;
+  width: 100%;
+  margin-top: $unit-xs;
+}
+
+.post-content {
+  float: left;
+  width: 100%;
+
+  div {
+    float: left;
+    width: 100% !important;
+  }
+
+  img {
+    float: left;
+    margin-top: $unit-md;
+    margin-bottom: $unit-md;
+    border: 7px solid white;
+  }
+
+  p {
+    float: left;
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: $unit-xs;
+    font-family: $font-2;
+    font-size: 13px;
+    line-height: 140%;
+
+    @include mq(sm) {
+      font-size: 13px;
+    }
+  }
+}
+
+.body-post {
+  float: left;
+  width: 100%;
+  padding-bottom: $unit-xxl;
+
+  .bp--inner {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white;
+
+    @include mq(lg) {
+      width: 90%;
+    }
+
+    @include mq(md) {
+      width: 95%;
+    }
+
+    @include mq(sm) {
+      width: 95%;
+    }
+
+    .bp--left {
+      padding: $unit-xxl $unit-xxl 0 0;
+
+      @include mq(sm) {
+        padding: $unit-lg 0 0 0;
+      }
+
+      .post-item {
+        float: left;
+        width: 100%;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid black;
+
+        img {
+          max-width: 300px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 0;
+        font-family: $font-1;
+        font-size: 20px;
+        font-weight: 500;
+        color: $black;
+        text-transform: none;
+        line-height: 135%;
+
+        @include mq(sm) {
+          font-size: 22px;
+        }
+
+        a {
+          line-height: 135%;
+        }
+      }
+
+      h2 {
+        float: left;
+        font-family: $font-1;
+        font-size: 30px;
+        font-weight: 400;
+
+        @include mq(sm) {
+          margin-top: $unit-xxs;
+          margin-bottom: 0;
+          line-height: 135%;;
+        }
+
+        a {
+          font-family: $font-1;
+          font-size: $font-size-xl;
+          font-weight: 500;
+          color: $black;
+          text-transform: none;
+          line-height: 135%;
+        }
+      }
+
+      .post-categories {
+        a {
+          padding: 4px 9px;
+          font-size: $font-size-xs;
+          font-weight: $font-weight-bold;
+          text-transform: uppercase;
+          background-color: $color-primary;
+          color: white;
+
+          &:hover {
+            background-color: darken($color-primary, 15%);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .bp--right {
+      padding: 0 0 3rem 0;
+    	margin-bottom: 2rem;
+    	height: auto;
+    	background-color: lighten($color-secondary, 47%);
+    	border: 1px solid lighten($color-secondary, 27%);
+
+      @include mq(md) {
+        padding: 0 0 3rem 0;
+      }
+
+      @include mq(sm) {
+        padding: 0 0 3rem 0;
+      }
+    }
+  }
+}

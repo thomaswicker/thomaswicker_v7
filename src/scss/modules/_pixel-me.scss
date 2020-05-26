@@ -1,0 +1,297 @@
+/*
+  ____ _____  _______ _       __  __ _____
+ |  _ \_ _\ \/ / ____| |     |  \/  | ____|
+ | |_) | | \  /|  _| | |     | |\/| |  _|
+ |  __/| | /  \| |___| |___  | |  | | |___
+ |_|  |___/_/\_\_____|_____| |_|  |_|_____|
+
+*/
+
+// Code for Pixel Me Superhero Animations
+
+.svg-container {
+  position: relative;
+  top: 0;
+  left: 35px;
+  float: left;
+  width: 100%;
+
+  @include mq(sm) {
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    .pixel-me .left-eye {
+      display: none;
+    }
+
+    .pixel-me .right-eye {
+      display: none;
+    }
+  }
+
+  &.svg-container-home {
+    .svg-bg-color {
+      fill: $color-primary;
+    }
+  }
+
+  &.svg-container-portfolio {
+    .svg-bg-color {
+      fill: $purple-potion;
+    }
+  }
+
+  &.svg-container-photography {
+    .svg-bg-color {
+      fill: $red-potion;
+    }
+  }
+
+  &.svg-container-culinary {
+    .svg-bg-color {
+      fill: $green-potion;
+    }
+  }
+
+  &.svg-container-resume {
+    .svg-bg-color {
+      fill: $orange-potion;
+    }
+  }
+
+  &.svg-container-contact {
+    .svg-bg-color {
+      fill: $teal-potion;
+    }
+  }
+
+  .svg-bg-color {
+    transition: 600ms ease-in-out;
+
+    &.svg-bg-home {
+      fill: $color-primary;
+    }
+
+    &.svg-bg-portfolio {
+      fill: $purple-potion;
+    }
+
+    &.svg-bg-photography {
+      fill: $red-potion;
+    }
+
+    &.svg-bg-culinary {
+      fill: $green-potion;
+    }
+
+    &.svg-bg-resume {
+      fill: $orange-potion;
+    }
+
+    &.svg-bg-contact {
+      fill: $teal-potion;
+    }
+  }
+
+	.pixel-me {
+    max-width: 190px;
+    animation: bounceIn .7s;
+
+    @include mq(sm) {
+      transform: scale(.9);
+    }
+
+    .main-nav-home-is-active.left-eye, .main-nav-home-is-active.right-eye {
+      animation: look1 250ms ease-in-out forwards;
+    }
+
+    .main-nav-portfolio-is-active.left-eye, .main-nav-portfolio-is-active.right-eye {
+      animation: look2 250ms ease-in-out forwards;
+    }
+
+    .main-nav-photography-is-active.left-eye, .main-nav-photography-is-active.right-eye {
+      animation: look3 250ms ease-in-out forwards;
+    }
+
+    .main-nav-culinary-is-active.left-eye, .main-nav-culinary-is-active.right-eye {
+      animation: look4 250ms ease-in-out forwards;
+    }
+
+    .main-nav-resume-is-active.left-eye, .main-nav-resume-is-active.right-eye {
+      animation: look5 250ms ease-in-out forwards;
+    }
+
+    .main-nav-contact-is-active.left-eye, .main-nav-contact-is-active.right-eye {
+      animation: look6 250ms ease-in-out forwards;
+    }
+
+    .left-eye {
+      fill: #05769E;
+    	animation: blink 6s infinite;
+      transform: translateX(0px) translateY(0px);
+
+    	&.closed {
+    	  fill: #F1C9B0;
+    	}
+    }
+
+    .right-eye {
+      fill: #05769E;
+    	animation: blink 6s infinite;
+      transform: translateX(0px) translateY(0px);
+
+    	&.closed {
+    	  fill: #F1C9B0;
+    	}
+    }
+	}
+}
+
+@keyframes bounceIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+
+@keyframes bounceIn2{
+  0%{
+    transform: rotate3d(0, 0, 0, 0deg) translate3d(0px,0px, 0px);
+  }
+  20%{
+    transform: rotate3d(1, 0, 1, 1deg) translate3d(2px,3px, 10px);
+  }
+  40%{
+    transform: rotate3d(1, 0, 1, 2deg) translate3d(2px,3px, 10px);
+  }
+  60%{
+    transform: rotate3d(1, 0, 1, 1deg) translate3d(2px,3px, 10px);
+  }
+  80%{
+    transform: rotate3d(1, 0, 1, 0deg) translate3d(2px,3px, 10px);
+  }
+  100%{
+    transform: rotate3d(0, 0, 0, 0deg) translate3d(0px,0px, 0px);
+  }
+}
+
+
+@keyframes blink {
+  0% {
+		fill: #05769E;
+	}
+	99% {
+		fill: #05769E;
+	}
+	100% {
+		fill: #F1C9B0;
+	}
+}
+
+@keyframes look1 {
+  0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+    transform: translateX(-7px) translateY(5px);
+	}
+}
+
+@keyframes look2 {
+  0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+    transform: translateX(-1px) translateY(5px);
+	}
+}
+
+@keyframes look3 {
+  0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+    transform: translateX(3px) translateY(5px);
+	}
+}
+
+@keyframes look4 {
+  0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+    transform: translateX(6px) translateY(5px);
+	}
+}
+
+@keyframes look5 {
+  0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+    transform: translateX(7px) translateY(4px);
+	}
+}
+
+@keyframes look6 {
+  0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+    transform: translateX(8px) translateY(3px);
+	}
+}
+
+@keyframes look7 {
+  0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+    transform: translateX(9px) translateY(2px);
+	}
+}
+
+@keyframes hinge {
+	0% {
+		 transform: rotate(-20deg) scale(0);
+		 transform-origin: top center;
+		 animation-timing-function: ease-in-out;
+	}
+	20% {
+		 transform: rotate(20deg);
+		 transform-origin: top center;
+		 animation-timing-function: ease-in-out;
+	}
+	40% {
+		 transform: rotate(-15deg);
+		 transform-origin: top center;
+		 animation-timing-function: ease-in-out;
+	}
+	60% {
+		 transform: rotate(10deg);
+		 transform-origin: top center;
+		 animation-timing-function: ease-in-out;
+	}
+	80% {
+		 transform: rotate(-5deg);
+		 transform-origin: top center;
+		 animation-timing-function: ease-in-out;
+	}
+	100% {
+		 transform: rotate(0deg) scale(0);
+	}
+ }

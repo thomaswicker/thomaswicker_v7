@@ -1,0 +1,224 @@
+/*
+ ____  _____    _    ____   ____ _   _
+/ ___|| ____|  / \  |  _ \ / ___| | | |
+\___ \|  _|   / _ \ | |_) | |   | |_| |
+ ___) | |___ / ___ \|  _ <| |___|  _  |
+|____/|_____/_/   \_\_| \_\\____|_| |_|
+*/
+
+/* ==========================================================================
+   %% Styling for Search and Search Results %%
+   ========================================================================== */
+ #body-search {
+   #body-search-inner {
+   	width: 90%;
+   	margin-left: auto;
+   	margin-right: auto;
+   	background-color: $white;
+
+   	@include mq(lg) {
+   		width: 96%;
+   	}
+
+   	@include mq(md) {
+   		width: 100%;
+   	}
+
+   	@include mq(sm) {
+   		width: 100%;
+
+   		h1 {
+   			padding-top: 1rem;
+   		}
+   	}
+
+    h2 {
+      float: left;
+      width: 100%;
+      margin: 40px 0 25px 0;
+      @include font($font-1, normal, 28px, 400);
+
+      @include mq(xl) {
+        font-size: 28px;
+      }
+
+      @include mq(lg) {
+        font-size: 26px;
+      }
+
+      @include mq(md) {
+        font-size: 24px;
+      }
+
+      @include mq(sm) {
+        margin: 1rem 0 $unit-xs 0;
+        text-align: center;
+        font-size: 23px;
+        font-family: Roboto, sans-serif, Helvetica, Arial, sans-serif;
+      }
+
+      a {
+        float: left;
+        width: 100%;
+        font-family: $font-1;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: none;
+        line-height: 145%;
+        color: $black;
+      }
+    }
+
+    #search-results {
+      float: left;
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 0px 25px 20px 25px;
+      background-color: #fff;
+      border: 1px solid $green-potion;
+      border-left: 5px solid $green-potion;
+
+      h2 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      .recipe-btn-container {
+        float: left;
+        width: 100%;
+
+        .btn-read-more {
+          margin-top: 0;
+          padding: 10px 20px;
+          background-color: $green-potion;
+          border: 1px solid $green-potion;
+
+          &:hover {
+            background-color: lighten($green-potion, 15%);
+            text-decoration: none;
+            border: 1px solid lighten($green-potion, 15%);
+          }
+        }
+      }
+
+      .recipe-image-container {
+        float: left;
+        width: 175px;
+        max-height: 200px;
+        overflow: hidden;
+
+        img {
+          width: 150px;
+        }
+
+        @include mq(md) {
+          width: 100%;
+        }
+
+        @include mq(sm) {
+          width: 100%;
+        }
+      }
+
+      .recipe-notes {
+        float: left;
+        width:calc(100% - 175px);
+
+        @include mq(md) {
+          width: 100%;
+          margin-top: 25px;
+          padding: 0;
+        }
+
+        @include mq(sm) {
+          width: 100%;
+          margin-top: 25px;
+          padding: 0;
+        }
+
+        h3 {
+          font-family: Roboto,sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #AAAAAA;
+
+          &.header {
+            font-size: 18px;
+            font-weight: 500;
+            color: $black;
+          }
+        }
+
+        .recipe-details {
+          float: left;
+          width: 100%;
+          margin-top: 15px;
+          margin-bottom: 5px;
+          padding: 0 20px 10px 0;
+
+          .recipe-prep-time, .recipe-cook-time, .recipe-total-portions {
+            float: left;
+            width: auto;
+            padding-right: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: $color-primary;
+
+            @include mq(md) {
+
+            }
+
+            @include mq(sm) {
+              float: left;
+              width: 100%;
+              text-align: center;
+            }
+
+            h3 {
+              float: left;
+              font-family: Roboto,sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              color: #AAAAAA;
+
+              @include mq(sm) {
+                float: none;
+              }
+            }
+
+            span.the-value {
+              float: left;
+              margin-left: 5px;
+              margin-right: 15px;
+              font-family: Roboto,sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              color: #AAAAAA;
+
+              @include mq(sm) {
+                float: none;
+              }
+            }
+          }
+        }
+
+        .note-content {
+          float: left;
+          width: 100%;
+          font-size: 15px;
+          line-height: 145%;
+        }
+
+        span.the-value {
+          float: left;
+          margin-left: 5px;
+          margin-right: 15px;
+          font-family: Roboto,sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #AAAAAA;
+        }
+      }
+    }
+  }
+}

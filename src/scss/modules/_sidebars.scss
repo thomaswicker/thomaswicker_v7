@@ -1,0 +1,78 @@
+/*
+ ____ ___ ____  _____ ____    _    ____  ____
+/ ___|_ _|  _ \| ____| __ )  / \  |  _ \/ ___|
+\___ \| || | | |  _| |  _ \ / _ \ | |_) \___ \
+ ___) | || |_| | |___| |_) / ___ \|  _ < ___) |
+|____/___|____/|_____|____/_/   \_\_| \_\____/
+
+*/
+
+
+/* ==========================================================================
+   %% Styling for Sidebars throughout the site %%
+   ========================================================================== */
+
+.alt-sidebar {
+  float: left;
+  width: 100%;
+
+  h4 {
+    float: left;
+    width: 100%;
+    margin-top: $unit-tiny;
+    margin-bottom: $unit-tiny;
+    padding-top: $unit-xs;
+    font-family: $font-1;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    color: $teal-potion;
+    border-top: 1px solid $teal-potion;
+  }
+
+  .widget_categories {
+    ul {
+      li {
+        padding-left: $unit-xs;
+
+        a {
+          color: $black;
+
+          &:hover {
+            color:$teal-potion;
+          }
+        }
+      }
+    }
+  }
+
+  .widget_recent_entries {
+    float: left;
+    width: 100%;
+    margin-top: $unit-lg;
+
+    ul {
+      li {
+        float: left;
+        width: 100%;
+        margin-top: $unit-sm;
+        padding-left: $unit-xs;
+
+        a {
+          line-height: 135%;
+          color: $black;
+
+          &:hover {
+            color:$teal-potion;
+          }
+
+          &:before {
+            content: "\f02e";
+            margin-right: 6px;
+            font-family: $font-4;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

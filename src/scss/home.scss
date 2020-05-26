@@ -1,0 +1,1530 @@
+@import "global/mixins";
+@import "global/vars";
+
+/*
+  _   _  ___  __  __ _____
+ | | | |/ _ \|  \/  | ____|
+ | |_| | | | | |\/| |  _|
+ |  _  | |_| | |  | | |___
+ |_| |_|\___/|_|  |_|_____|
+
+*/
+
+.home-header {
+  border-top: 5px solid darken($color-primary, 10%);
+
+  @include mq(sm) {
+    border-top: 3px solid darken($color-primary, 10%);
+  }
+
+  .site-logo {
+    position: absolute;
+    top: $unit-xs;
+    left: $unit-base;
+    font-family: $font-1;
+    font-size: 14px;
+    color: white;
+    z-index: 10;
+  }
+}
+
+.body-home {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+	background-color: #F4F7F8;
+
+  .body-home-inner {
+    flex: 1 100%;
+  	margin-left: auto;
+  	margin-right: auto;
+  	background-color: $white;
+
+  	@include mq(lg) {
+  	}
+
+  	@include mq(md) {
+  	}
+
+  	@include mq(sm) {
+
+  		h1 {
+  			padding-top: $unit-lg;
+  		}
+  	}
+
+    h2 {
+      flex: 1 100%;
+      letter-spacing: -1px;
+    }
+
+    .home-body-content {
+      float: left;
+      width: 100%;
+      padding-left: 30px;
+
+      @include mq(md) {
+        padding-bottom: 30px;
+      }
+
+      @include mq(sm) {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+      }
+
+      .hbc--top {
+        float: left;
+        width: 100%;
+
+        @include mq(md) {
+          padding-top: $unit-lg;
+        }
+
+        @include mq(sm) {
+          padding-top: $unit-lg;
+        }
+
+        h2 {
+          margin-top: $unit-tiny;
+        }
+      }
+
+      .hbc--left {
+        float: left;
+        width: 100%;
+
+        @include mq(md) {
+          width: 100%;
+          padding-right: 0;
+        }
+
+        @include mq(sm) {
+          width: 100%;
+          padding-right: 0;
+        }
+
+        h2 {
+          margin-bottom: 0;
+        }
+      }
+
+      .hbc--right {
+        display: flex;
+        width: 100%;
+        padding-top: $unit-base;
+
+        img {
+          align-self: center;
+        }
+
+        .slider_1 {
+          position: relative;
+          top: 0px;
+
+          img {
+
+          }
+        }
+
+        @include mq(md) {
+          width: 310px;
+
+          .slider_1 {
+            position: relative;
+            top: 0;
+
+            img {
+
+            }
+          }
+        }
+
+        @include mq(sm) {
+          max-width: 93%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+
+          .slider_1 {
+            position: relative;
+            top: 0;
+
+            img {
+
+            }
+          }
+        }
+      }
+    }
+
+    .body-text strong {
+      font-style: italic;
+    }
+
+    .body-text span.emphasize {
+      font-style: italic;
+    }
+
+    .body-home-left {
+    	padding: 2.5rem 4rem 0 0;
+
+    	@include mq(lg) {
+    		padding: 2rem 2rem 0 0;
+    	}
+
+    	@include mq(md) {
+    		padding: 2rem 2rem 0 0;
+    	}
+
+    	@include mq(sm) {
+    		padding: 0 0 0 0;
+    	}
+
+      h2 {
+        position: relative;
+        top: -5px;
+        font-family: $font-1;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 140%;
+        text-transform: none;
+      }
+
+      blockquote {
+        float: left;
+        max-width: 850px;
+        padding-left: $base-unit;
+        margin-bottom: 10px;
+        font-family: $font-1;
+        font-size: 30px;
+        font-weight: 300;
+        color: $blue-potion;
+        line-height: 130%;
+        border-left: 5px solid $blue-potion;
+
+        @include mq(xl) {
+          font-size: 27px;
+        }
+
+        @include mq(lg) {
+          font-size: 24px;
+        }
+
+        @include mq(md) {
+          font-size: 22px;
+          font-weight: 500;
+        }
+
+        @include mq(sm) {
+          margin: 5px 0 $base-unit $base-unit;
+          padding-right: $base-unit;
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 135%;
+        }
+
+        p {
+          font-size: 35px;
+          line-height: 125%;
+
+          @include mq(lg) {
+            font-size: 32px;
+          }
+
+          @include mq(md) {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 130%;
+          }
+
+          @include mq(sm) {
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 130%;
+          }
+        }
+
+        a {
+          font-weight: 300;
+          color: $color-primary;
+          text-decoration: underline;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+
+      p.body-text {
+        @include mq(sm) {
+          padding-left: $unit-base;
+          padding-right: $unit-base;
+        }
+      }
+
+      .btn-view-all {
+        float: right;
+
+        i {
+          margin-left: 3px;
+        }
+
+        @include mq(sm) {
+          float: left;
+          width: 100%;
+          margin-top: 0;
+          padding: $unit-xs $unit-md;
+          background-color: $orange-potion;
+          color: $white;
+        }
+      }
+    }
+
+    .body-home-right {
+    	padding: 1.5rem 1.25rem 2rem 1.25rem;
+    	margin-bottom: 2rem;
+    	height: auto;
+    	min-height: 62.5rem;
+    	background-color: $white;
+
+    	@include mq(md) {
+    		padding: 2rem 1rem 3rem 1rem;
+    	}
+
+    	@include mq(sm) {
+    		padding: 1.5rem 1rem 3rem 1rem;
+    	}
+    }
+  }
+}
+
+.admin-buttons {
+	margin-top: 2rem;
+
+	@include mq(sm) {
+		margin-top: 1rem;
+	}
+}
+
+.lastfm {
+  table {
+    td:nth-child(1) {
+      width: 65px;
+    }
+
+    td:nth-child(2) {
+      width: calc(100% - 65px);
+    }
+  }
+}
+
+.lastfm-container {
+	float: left;
+	border: 2px solid $gray;
+	background-color: $white;
+
+	@include mq (sm) {
+		width: 100%;
+	}
+
+  .widget_lastfm_widget {
+    float: left;
+    width: 100%;
+    padding: 15px;
+
+    .lastfm-user {
+      display: none;
+    }
+
+    .lastfm-row {
+      float: left;
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+
+      &:last-child {
+        border-bottom: 0px;
+      }
+
+      .lastfm-col-twenty {
+        flex: 0 0 10%;
+      }
+
+      .lastfm-col {
+        position: relative;
+        top: -4px;
+        float: left;
+        width: 100%;
+
+        small {
+          font-family: $font-1;
+          font-size: 13px;
+          line-height: 140%;
+
+          &:first-child {
+            font-size: 15px;
+          }
+        }
+      }
+
+      img {
+        max-width: 50px;
+      }
+    }
+  }
+
+	.lastfm-title {
+		float: left;
+		width: 100%;
+		padding: 0;
+		background-color: $gray;
+
+		#lastfm-title-left {
+			float: left;
+			width: 45px;
+      padding: $unit-xxs 0 0 0;
+			text-align: center;
+
+			@include mq(md) {
+
+			}
+
+      .fa {
+        color: white;
+        font-size: 22px;
+      }
+		}
+
+		#lastfm-title-right {
+			float: left;
+			width: calc(100% - 45px);
+
+			@include mq(md) {
+        width: calc(100% - 45px);
+			}
+
+			h4 {
+				@include font($font-2, normal, $font-size-md, $font-weight-semibold);
+				padding: $unit-xs 0 0 0;
+        font-weight: 600;
+				color: $white;
+
+				@include mq(md) {
+          padding: $unit-xs 0 0 0;
+				}
+
+				@include mq(sm) {
+          padding: $unit-xs 0 0 0;
+				}
+			}
+		}
+	}
+}
+
+.instagram-container {
+	float: left;
+  width: 100%;
+  background-color: black;
+
+  h2 {
+    padding-left: 30px;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 132%;
+    color: white;
+
+    @include mq(sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    i {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+.social-feed {
+	float: left;
+	padding: 0;
+	margin: $unit-sm 0 0 0;
+	border: 2px solid $gray;
+	background-color: $white;
+
+	h2 {
+		padding: 0;
+	}
+
+	aside {
+		padding: 0;
+	}
+
+	#twitter-feed {
+		width: 100%;
+		padding-top: $unit-xs;
+	}
+
+	#twitter-title {
+    float: left;
+		width: 100%;
+		padding: 0;
+		background-color: $gray;
+
+		#twitter-title-left {
+      float: left;
+			width: 45px;
+      padding: $unit-xxs 0 0 0;
+			text-align: center;
+
+			@include mq(md) {
+
+			}
+
+      .fa {
+        color: white;
+        font-size: 22px;
+      }
+		}
+
+		#twitter-title-right {
+      float: left;
+			width: calc(100% - 45px);
+
+			@include mq(md) {
+        width: calc(100% - 45px);
+			}
+
+			h4 {
+				@include font($font-2, normal, $font-size-md, $font-weight-semibold);
+				padding: $unit-xs 0 0 0;
+        font-weight: 600;
+				color: $white;
+
+				@include mq(md) {
+          padding: $unit-xs 0 0 0;
+				}
+
+				@include mq(sm) {
+          padding: $unit-xs 0 0 0;
+				}
+			}
+		}
+  }
+}
+
+.var-chromeless .tweet {
+	border-bottom: 1px solid $light-gray !important;
+	padding: 0rem 0rem 2rem 0rem;
+}
+
+.my-references {
+  padding: .5rem 0 0 .5rem;
+  background-color: $blue-potion;
+
+  @include mq(md) {
+    padding: .7rem 0 0 .5rem;
+  }
+
+  @include mq(sm) {
+    padding: 0;
+  }
+
+  h2 {
+    position: relative;
+    top: -5px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: none;
+
+    @include mq(sm) {
+      margin: 1rem 0 $unit-xs 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-top: 1px solid $orange-potion;
+      border-bottom: 1px solid $orange-potion;
+      color: white;
+      text-align: center;
+      font-size: 25px;
+      font-family: Roboto, sans-serif, Helvetica, Arial, sans-serif;
+    }
+  }
+
+  .ref-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    width: 100%;
+    margin: .9rem 0 .9rem 0;
+    padding: 1.5rem 1.2rem;
+    background-color: $blue-potion;
+    background-color: $blue-potion;
+    color: white;
+
+    @include mq(md) {
+      width: 100%;
+    }
+
+    @include mq(sm) {
+      min-height: 550px;
+    }
+
+    .ref-card-left {
+      width: 200px;
+      text-align: center;
+
+      @include mq(md) {
+
+      }
+
+      @include mq(sm) {
+        display: block;
+        float: left;
+        width: 100%;
+        height: 200px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 110px;
+        margin-top: -5px;
+        border-radius: 50%;
+
+        @include mq(sm) {
+          max-width: 200px;
+          border-radius: 0;
+        }
+      }
+    }
+
+    .ref-card-right {
+      flex: 1;
+      width: 100%;
+      padding-top: 0;
+      padding-right: 50px;
+      font-family: Roboto,sans-serif,Helvetica,Arial,sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: white;
+
+      @include mq(md) {
+
+      }
+
+      @include mq(sm) {
+        display: block;
+        float: left;
+        width: 100%;
+        min-height: 300px;
+        font-size: 15px;
+        padding: 20px 20px 20px 20px;
+      }
+
+      strong {
+        float: left;
+        padding-top: $unit-sm;
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+
+// YOUTUBE VIDEOS SECTION
+
+.youtube-vids {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100px;
+  padding-bottom: 20px;
+  background-color: $xxlight-gray;
+
+  @include mq(sm) {
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h2 {
+    flex: 1 100%;
+    position: relative;
+    top: -5px;
+    font-family: $font-1;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: none;
+
+    img {
+      position: relative;
+      max-width: 42px;
+    }
+  }
+
+  .gallery-video-content {
+    flex: 1 100%;
+  }
+}
+
+section #origincode_videogallery {
+  margin-bottom: 25px !important;
+  padding: 10px 0 0 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+
+  li {
+    border: 0 !important;
+
+    a {
+      border-radius: 0px !important;
+    }
+  }
+}
+
+
+// PORTFOLIO CSS
+
+.body-portfolio {
+  padding-bottom: 25px;
+  background-color: $white;
+  overflow-x: hidden;
+
+  &.no-scroll {
+    overflow: hidden;
+
+    .body-portfolio-inner {
+      overflow: hidden;
+    }
+  }
+
+  @include mq(sm) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  h2 {
+    flex: 1 100%;
+    position: relative;
+    top: 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: $font-1;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 132%;
+    text-transform: none;
+    letter-spacing: -1px;
+
+    @include mq(sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .body-portfolio-inner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 $unit-xl 0;
+    overflow-x: hidden;
+  
+    .masonry-container {
+      float: left;
+      width: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+      color: white !important;
+      background-color: $white !important;
+      overflow: hidden;
+  
+      @include mq(sm) {
+        margin-top: $unit-xs !important;
+      }
+  
+      .portfolio-item {
+        float: left;
+        width: 25%;
+        height: auto;
+        padding: 25px $unit-xs $unit-md $unit-xs;
+        background-color: $white;
+        border: 1px solid #DFDFDF;
+  
+        @include mq(lg) {
+          width: 33.3333%;
+        }
+  
+        @include mq(md) {
+          width: 49.90%;
+        }
+  
+        @include mq(sm) {
+          width: 100%;
+          padding: 25px 20px $unit-md 20px;
+        }
+  
+        .button-footer {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          padding: 5px 0 0 5px;
+  
+          a {
+            @include mq(sm) {
+              float: left;
+              width: 48%;
+              padding: $unit-xs $unit-sm;
+            }
+  
+            margin-right: 5px;
+          
+            &.btn-link--details {
+              background-color: $green-potion;
+              color: $black;
+              border: 1px solid $green-potion;
+          
+              &:hover {
+                background-color: lighten($green-potion, 15%);
+                color: $black;
+                border: 1px solid lighten($green-potion, 15%);
+              }
+            }
+          
+            &.btn-link--site {
+              background-color: $blue-potion;
+              color: $white;
+              border: 1px solid $blue-potion;
+          
+              &:hover {
+                background-color: darken($blue-potion, 15%);
+                color: $white;
+                border: 1px solid darken($blue-potion, 15%);
+              }
+            }
+          
+            &.btn-link--behance {
+              background-color: $green-potion;
+              color: $black;
+              border: 1px solid $green-potion;
+          
+              &:hover {
+                background-color: lighten($green-potion, 15%);
+                border: 1px solid lighten($green-potion, 15%);
+              }
+            }
+          
+            &.btn-link--github {
+              background-color: $medium-gray;
+              color: $white;
+              border: 1px solid $medium-gray;
+          
+              &:hover {
+                background-color: darken($medium-gray, 15%);
+                color: $white;
+                border: 1px solid darken($medium-gray, 15%);
+              }
+            }
+          }
+  
+          .button-secondary {
+            margin-left: $unit-xs;
+          }
+        }
+  
+        .portfolio-new-label {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          padding: 3px 6px;
+          background-color: orange;
+          color: white;
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+  
+        &.new {
+          &:after {
+            content: "NEW";
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: auto;
+            height: auto;
+            padding: 2px 5px;
+            font-family: $font-1;
+            font-size: 12px;
+            font-weight: bold;
+            background: $orange-potion;
+            color: white;
+          }
+        }
+  
+        h1, h2, h3, h4, h5, h6 {
+          font-family: $font-1;
+          text-align: left;
+        }
+
+        h2 {
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1 100%;
+          margin: 0 0 $unit-tiny 0;
+          padding-left: $unit-tiny;
+          font-family: Roboto;
+          font-size: 20px;
+          font-weight: 800;
+          letter-spacing: -1px;
+          text-transform: none;
+          color: black;
+          line-height: 140%;
+        }
+  
+        h3 {
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1 100%;
+          margin-bottom: 5px;
+          padding: 0 20px 0 $unit-tiny;
+          font-family: $font-1;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: $base-line-height;
+          color: $black;
+          text-transform: none;
+  
+          @include mq(lg) {
+  
+           }
+  
+          @include mq(md) {
+  
+          }
+  
+          @include mq(sm) {
+  
+          }
+        }
+  
+        h4 {
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1 100%;
+          margin-top: $unit-tiny;
+          margin-bottom: $unit-tiny;
+          padding: 0 $unit-base 0 $unit-tiny;
+          font-family: $font-1;
+          font-size: 17px;
+          font-style: italic;
+          font-weight: 500;
+          line-height: $base-line-height;
+          color: $black;
+          text-transform: none;
+  
+          @include mq(md) {
+            font-size: 17px;
+          }
+  
+          @include mq(sm) {
+            font-size: 17px;
+            font-weight: bold;
+          }
+        }
+  
+        h5 {
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1 100%;
+          padding: 0 $unit-base 0 5px;
+          font-family: $font-1;
+          font-size: $font-size-base;
+          font-weight: 400;
+          line-height: $base-line-height;
+          color: #888;
+          text-transform: none;
+  
+          @include mq(md) {
+            font-size: $font-size-sm;
+          }
+  
+          @include mq(sm) {
+            font-size: $font-size-sm;
+          }
+        }
+  
+        a {
+          font-size: $font-size-sm;
+          text-decoration: none;
+        }
+  
+        .image {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+.orbit-container {
+  position: relative;
+  height: auto !important;
+  min-height: 240px;
+  z-index: 998;
+
+  button.orbit-previous, button.orbit-next  {
+    position: absolute;
+    top: 100px !important;
+    float: left;
+    display: block;
+    width: auto;
+    min-width: 0;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    background-color: $green-potion;
+    border: 1px solid $green-potion;
+    z-index: 1000;
+
+    &:hover {
+      background-color: lighten($green-potion, 10%);
+      border: 1px solid lighten($green-potion, 10%);
+    }
+
+    i.fa {
+      font-size: 18px;
+    }
+  }
+
+  button.orbit-previous {
+    left: 10px;
+    right: initial;
+  }
+
+  button.orbit-next {
+    right: 10px;
+    left: initial;
+  }
+}
+
+// CONTACT SECTION CSS
+
+div.wpcf7 {
+  float: left;
+  width: 100%;
+  padding-left: 18px;
+
+  @include mq(sm) {
+    padding-left: 0;
+  }
+}
+
+.wpcf7-form {
+  label {
+    font-family: arial;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+}
+
+.wpcf7-form-control-wrap {
+  float: left;
+  width: 100%;
+  margin-top: $unit-xs;
+}
+
+.body-contact {
+  margin-bottom: $unit-lg;
+  padding-top: 25px;
+  padding-bottom: $unit-xxl;
+  background-color: $white;
+
+  @include mq(sm) {
+		top: $unit-xs;
+
+		.my-info-mobile {
+			display: none;
+		}
+  }
+}
+
+.body-contact-inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 $unit-xl 0;
+  background-color: $white;
+
+  @include mq(lg) {
+ 		width: 90%;
+  }
+
+  @include mq(md) {
+ 		width: 100%;
+  }
+
+  @include mq(sm) {
+ 		width: 95%;
+  }
+}
+
+.body-contact-left {
+	float: left;
+  width: 500px;
+	padding: 0 $unit-sm 0 0;
+  text-align: left;
+
+  @include mq(lg) {
+    padding: 0 $unit-sm 0 $unit-xl;
+  }
+
+  @include mq(md) {
+    width: 100%;
+    padding: 0 $unit-sm 0 $unit-xl;
+  }
+
+	@include mq(sm) {
+    width: 100%;
+    padding: 0 $unit-sm 0 $unit-sm;
+		text-align: center;
+	}
+
+  .contact-info-container {
+    float: left;
+    width: 100%;
+
+    h2 {
+      position: relative;
+      top: 0;
+      padding-left: 30px;
+      font-family: $font-1;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 140%;
+      text-transform: none;
+
+      @include mq(md) {
+        padding-left: 0;
+      }
+    
+      @include mq(sm) {
+        padding-left: 0;
+      }
+    }
+
+    @include mq(xl) {
+
+    }
+
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+      float: left;
+      min-width: none;
+      max-width: none;
+    }
+
+    @include mq(sm) {
+      float: left;
+      min-width: none;
+      max-width: none;
+    }
+
+    .body-text {
+      padding-left: 30px;
+
+      @include mq(md) {
+        padding-left: 0;
+      }
+    
+      @include mq(sm) {
+        padding-left: 0;
+      }
+    }
+
+    p {
+      float: left;
+      width: 100%;
+      line-height: $base-line-height;
+
+      &.name {
+        margin-top: 20px;
+
+        strong {
+          font-size: 20px;
+          font-weight: 600 !important;
+        }
+
+        @include mq(sm) {
+          font-size: $font-size-xxl;
+
+          strong {
+          }
+        }
+      }
+
+      &.title {
+        @include mq(sm) {
+          font-size: $font-size-xl;
+          font-style: italic;
+        }
+      }
+
+      &.address {
+        @include mq(sm) {
+
+        }
+      }
+    }
+
+    a {
+      display: block;
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .contact-email {
+      float: left;
+      width: 100%;
+      margin-top: 3px;
+      padding-left: 30px;
+
+      @include mq(md) {
+        padding-left: 0;
+      }
+    
+      @include mq(sm) {
+        padding-left: 0;
+      }
+
+      a {
+        float: left;
+        width: 100%;
+
+        &:before {
+          content: "thomas@thomaswicker.com";
+        }
+
+        @include mq(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+	.contact-page-email-btn a {
+		@include mq(sm) {
+			width: 100%;
+      margin-top: $unit-xl;
+			font-size: 1rem !important;
+		}
+	}
+
+	.google-map {
+		float: left;
+		width: 100%;
+		margin: $unit-xxs 0 0 0;
+
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+
+    }
+
+    @include mq(sm) {
+      margin: $unit-xxs 0 0 0;
+    }
+
+		iframe {
+			width: 250px;
+			height: 250px;
+			background-color: $white;
+			padding: 7px;
+			-moz-box-shadow: 0 0 6px #444;
+			-webkit-box-shadow: 0 3px 6px #444;
+			box-shadow: 0 0 6px #444;
+
+			@include mq(lg) {
+				width: 275px;
+				height: 275px;
+			}
+
+			@include mq(md) {
+				width: 240px;
+				height: 240px;
+			}
+
+			@include mq(sm) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.body-contact-right {
+  float: left;
+  width: calc(100% - 500px);
+	padding: $unit-base $unit-base 50px $unit-base;
+
+  @include mq(xl) {
+
+  }
+
+  @include mq(lg) {
+
+  }
+
+	@include mq(md) {
+    width: 100%;
+		padding: 0 0 $unit-lg 20px;
+  }
+
+	@include mq(sm) {
+    width: 100%;
+		padding: 0 0 $unit-lg 0;
+	}
+
+  h2 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 140%;
+    text-transform: none;
+  }
+
+  .btn {
+    border: 0;
+  }
+
+  .btn-secondary {
+
+  }
+  .btn-gray {
+
+  }
+
+  .body-text {
+    max-width: 1100px;
+
+    @include mq(lg) {
+      padding-left: 15px;
+    }
+
+    @include mq(md) {
+      padding-left: 15px;
+    }
+
+    @include mq(sm) {
+      padding-left: 15px;
+    }
+  }
+
+	.contact-blurb {
+		font-size: $font-size-lg;
+		line-height: $base-line-height;
+		margin: 0 0 $unit-base 0;
+	}
+
+	.contact-button-container {
+		float: left;
+		margin: $unit-base 0;
+
+    .btn {
+      @include mq(sm) {
+        width: 100% !important;
+      }
+    }
+
+    .btn-secondary {
+      @include mq(sm) {
+        margin-top: $unit-base;
+      }
+    }
+
+    .btn-gray {
+      @include mq(sm) {
+        margin-top: $unit-xs;
+      }
+    }
+	}
+
+  label {
+    font-weight: 600;
+
+    @include mq(sm) {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+  }
+
+	input {
+		float: left;
+		width: 100%;
+    max-width: 600px;
+    margin: 0;
+		padding: 7px $unit-xxs 7px 8px;
+		border: 1px solid $light-gray;
+		border-radius: 0;
+    box-shadow: none;
+
+		&:focus {
+			-moz-box-shadow: 0 0 6px $color-primary;
+			-webkit-box-shadow: 0 3px 6px $color-primary;
+			box-shadow: 0 0 6px $color-primary;
+			border: none;
+		}
+
+		@include mq(md) {
+			width: 90%;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+		}
+	}
+
+	textarea  {
+		float: left;
+		clear: both;
+		width: 90%;
+		min-height: 180px;
+    font-size: 14px;
+		padding: 17px 15px;
+		border: 1px solid $light-gray;
+		border-radius: 0;
+
+		@include mq(md) {
+			width: 90%;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+		}
+	}
+
+  .wpcf7-submit {
+    float: left;
+    width: auto;
+    min-width: $unit-jumbo;
+    margin-top: $unit-md;
+    padding: $unit-sm $unit-lg;
+    border: 2px solid $color-primary;
+    border-radius: 0;
+    font-family: $font-1;
+    font-size: $font-size;
+    font-weight: $font-weight-semibold;
+    text-align: center;
+    background: $color-primary;
+    color: $white;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    transition: all .3s ease;
+    display: block;
+
+    &:hover {
+      border: 2px solid lighten($color-primary, 10%);
+      background: lighten($color-primary, 10%);
+    }
+
+    @include mq(sm) {
+      width: 100%;
+      font-family: $font-1;
+      font-size: 15px;
+    }
+  }
+
+  .wpcf7 .ajax-loader {
+    float: left;
+  }
+
+  .wpcf7-response-output {
+    float: left;
+    width: 100%;
+    margin: $unit-md 0 0 0;
+    padding: $unit-xs $unit-md;
+    border: 0;
+
+    &.wpcf7-mail-sent-ok {
+      background-color: green;
+      color: white;
+    }
+
+    &.wpcf7-validation-errors {
+      background-color: red;
+      color: white;
+    }
+  }
+
+  .wpcf7-form label {
+    float: left;
+    width: 100%;
+    margin: $unit-sm 0 0 0;
+    font-family: $font-1;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .wpcf7-not-valid-tip {
+    float: left;
+    width: 100%;
+    margin: $unit-xs 0 0 0;
+  }
+}
+
+.contact-form {
+  padding-left: $unit-sm;
+
+  label {
+    float: left;
+    width: 100%;
+  }
+
+  .buttons {
+    .btn {
+      max-width: 150px;
+      margin-top: $unit-sm;
+    }
+  }
+}
+
+#sb_instagram .sbi_follow_btn a {
+  background-color: $color-primary;
+  color: white;
+  border-radius: 0;
+
+  &:hover {
+    background-color: lighten($color-primary, 10%);
+  }
+}
+
+.video-wrapper {
+  padding: 5px;
+}
+
+iframe{
+  width: 31vw;
+  height: calc(100vw/5.2);
+
+  @include mq(md) {
+    width: 47vw;
+    height: calc(100vw/4)
+  }
+
+  @include mq(sm) {
+    width: 98vw;
+    height: calc(100vw/1.7)
+  }
+}
