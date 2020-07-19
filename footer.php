@@ -1,11 +1,8 @@
 		</footer>
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-		
-		<?php wp_footer(); ?>
 
 		<!-- Magical Spells -->
-
 		<script defer>
 			//Initializing Foundation
 			$(document).foundation();
@@ -33,6 +30,7 @@
 
 			gtag('config', 'UA-57367508-1');
 		</script>
-
+		
+		<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=HpesS4UizuTUhFy8Zu5B7ax0d0y1sesc6VCPQKcYoZtPG2FsnowtrqsB9oJl"></script></span>
 	</body>
 </html>

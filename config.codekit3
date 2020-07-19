@@ -2367,9 +2367,757 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/dist/index.php",
-		"oF": 1
+		"oF": 0
+		},
+	"/instagram-feed-pro/css/sb-instagram-admin.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/css/sb-instagram-admin-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/instagram-feed-pro/css/sb-instagram.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/css/sb-instagram-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/instagram-feed-pro/css/sb-instagram.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/css/sb-instagram.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/instagram-feed-pro/EDD_SL_Plugin_Updater.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/EDD_SL_Plugin_Updater.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/img/balloon.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/balloon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/carousel.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/carousel.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/grid.png": {
+		"ft": 32768,
+		"iS": 612,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/grid.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/highlight.png": {
+		"ft": 32768,
+		"iS": 573,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/highlight.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/instagram-pro-promo.png": {
+		"ft": 32768,
+		"iS": 16260,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/instagram-pro-promo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/loader.png": {
+		"ft": 32768,
+		"iS": 151,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/loader.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/masonry.png": {
+		"ft": 32768,
+		"iS": 666,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/masonry.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/placeholder.png": {
+		"ft": 32768,
+		"iS": 176,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/placeholder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/sbi-icon.png": {
+		"ft": 32768,
+		"iS": 2259,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/sbi-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/sbi-sprite.png": {
+		"ft": 32768,
+		"iS": 3943,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/sbi-sprite.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/small-logo.png": {
+		"ft": 32768,
+		"iS": 1312,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/small-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/stories-placeholder.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/stories-placeholder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/video-lightbox.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/video-lightbox.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-caching.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-caching.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-custom-sizes.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-custom-sizes.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-customize.png": {
+		"ft": 32768,
+		"iS": 5528,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-customize.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-license.png": {
+		"ft": 32768,
+		"iS": 3104,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-license.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-lightbox.png": {
+		"ft": 32768,
+		"iS": 13332,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-lightbox.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-local.png": {
+		"ft": 32768,
+		"iS": 19806,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-local.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-multiple.jpg": {
+		"ft": 16384,
+		"iS": 26383,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-multiple.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-performance.png": {
+		"ft": 32768,
+		"iS": 3138,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-performance.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-reconnect.png": {
+		"ft": 32768,
+		"iS": 7599,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-reconnect.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-shortcode.png": {
+		"ft": 32768,
+		"iS": 3229,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-shortcode.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-showusers.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-showusers.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-story-centered.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-story-centered.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-story.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-story.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-support.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-support.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-tagged.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-tagged.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-token.jpg": {
+		"ft": 16384,
+		"iS": 10818,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-token.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/instagram-feed-pro/img/welcome-type.png": {
+		"ft": 32768,
+		"iS": 4879,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/img/welcome-type.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/instagram-feed-pro/inc/admin/actions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/admin/actions.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/admin/main.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/admin/main.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-api-connect.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-api-connect.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-cron-updater.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-cron-updater.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-display-elements.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-display-elements.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-feed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-feed.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-parse.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-parse.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-post-set.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-post-set.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-post.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-post.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-posts-manager.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-posts-manager.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-settings.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-settings.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/class-sb-instagram-token-refresher.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/class-sb-instagram-token-refresher.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/if-functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/if-functions.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/pro/class-sbi-api-connect-pro.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/pro/class-sbi-api-connect-pro.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/pro/class-sbi-comments.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/pro/class-sbi-comments.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/pro/class-sbi-cron-update-pro.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/pro/class-sbi-cron-update-pro.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/pro/class-sbi-display-elements-pro.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/pro/class-sbi-display-elements-pro.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/pro/class-sbi-feed-pro.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/pro/class-sbi-feed-pro.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/pro/class-sbi-parse-pro.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/pro/class-sbi-parse-pro.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/inc/pro/class-sbi-settings-pro.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/inc/pro/class-sbi-settings-pro.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/instagram-feed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/instagram-feed.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/js/sb-instagram-admin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/js/sb-instagram-admin-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/instagram-feed-pro/js/sb-instagram-mediavine.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/js/sb-instagram-mediavine-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/instagram-feed-pro/js/sb-instagram.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/js/sb-instagram-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/instagram-feed-pro/js/sb-instagram.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/js/sb-instagram.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-da_DK.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-da_DK.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-de_DE.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-de_DE.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-es_ES.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-es_ES.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-fi_FI.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-fi_FI.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-fr_FR.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-fr_FR.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-it_IT.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-it_IT.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-ja_JP.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-ja_JP.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-nn_NO.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-nn_NO.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-pt_PT.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-pt_PT.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-ru_RU.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-ru_RU.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed-sv_SE.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed-sv_SE.mo",
+		"oF": 0
+		},
+	"/instagram-feed-pro/languages/instagram-feed.pot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/languages/instagram-feed.pot",
+		"oF": 0
+		},
+	"/instagram-feed-pro/README.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/README.txt",
+		"oF": 0
+		},
+	"/instagram-feed-pro/templates/feed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/templates/feed.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/templates/footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/templates/footer.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/templates/header-boxed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/templates/header-boxed.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/templates/header-generic.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/templates/header-generic.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/templates/header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/templates/header.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/templates/item.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/templates/item.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/widget.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/widget.php",
+		"oF": 0
+		},
+	"/instagram-feed-pro/wpml-config.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dist/instagram-feed-pro/wpml-config.xml",
+		"oF": 0
 		},
 	"/instagram-feed-pro/css/sb-instagram-admin.css": {
 		"aP": 1,

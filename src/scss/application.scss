@@ -47,6 +47,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 /* ## Base ## */
 @import "base/reset";
 @import "base/normalize";
@@ -83,21 +86,34 @@
 @import "body";
 @import "home";
 
+@charset "utf-8";
+
 html {
-  &.html-portfolio-single {
-    overflow: hidden !important;
+  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+  
+  @include mq(md) {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
-  @media screen and (max-width: 782px) {
-    margin-top: 0 !important;
+  @include mq(sm) {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
 body {
   position: relative;
   background-color: #FFFFFF;
+  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
 
-  &.body-for-portfolio-single-item {
-    overflow: hidden !important;
+  @include mq(md) {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  @include mq(sm) {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }

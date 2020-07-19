@@ -26,6 +26,7 @@
 		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
@@ -50,9 +51,4 @@
 		<meta property="og:url"                content="http://thomaswicker.com/" />
 		<meta property="og:title"              content="Thomas Wicker - Senior Front End Developer UI/UX" />
 		<meta property="og:image"              content="http://www.thomaswicker.com/wp-content/themes/thomaswicker/img/tw-og-image.jpg" />
-
-		<style>
-			@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,900');
-		</style>
-
 	</head>

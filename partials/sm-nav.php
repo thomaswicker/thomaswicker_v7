@@ -4,6 +4,11 @@
   </a>
 </li>
 <li>
+  <a href='https://www.youtube.com/channel/UCQlIq4pjUFBknns2wb9Iwyw?sub_confirmation=1' role="link" target="_blank" rel="noopener" title="My YouTube">
+    <i aria-hidden='true' class='fa fa-youtube'></i>
+  </a>
+</li>
+<li>
   <a href='https://www.linkedin.com/in/thomaswicker' role="link" target="_blank" rel="noopener" title="My LinkedIn">
     <i aria-hidden='true' class='fa fa-linkedin'></i>
   </a>

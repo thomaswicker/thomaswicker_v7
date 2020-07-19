@@ -25,7 +25,7 @@
 	}
 
  	li {
-    padding: $unit-xxs $unit-xxs;
+    padding: 6px;
  		margin-bottom: $unit-tiny;
  		text-align: center;
     transition: all 200ms ease;
@@ -48,14 +48,21 @@
 
   &.home {
     li {
-      background-color: lighten($color-primary, 12%);
+			background-color: #4e00b8;
+			
+			@include mq (md) {
+			}
+		
+			 @include mq (sm) {
+				background-color: lighten($color-primary, 12%);
+			}
 
       &:hover {
-        background-color: lighten($color-primary, 18%);
+        background-color: darken(#4e00b8, 12%);
 
-        a {
-
-        }
+				@include mq (sm) {
+					background-color: lighten($color-primary, 18%);
+				}
       }
     }
   }

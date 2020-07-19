@@ -4,7 +4,7 @@
 
 <section id="body-recipe-archives" class="medium-12 body-recipe-archives" role="main">
 	<section class="bra--inner">
-		<article class="bra--left large-8 medium-12 columns">
+		<article class="bra--left">
 
 			<?php if (have_posts()) : ?>
 		 		<?php if (is_category()) { ?>
@@ -82,7 +82,7 @@
 			<?php endif; ?>
 		</article>
 
-		<aside class='bra--right large-4 medium-12 columns'>
+		<aside class='bra--right'>
 			<section class="alt-sidebar">
 				<h3>Search All Recipes</h3>
 

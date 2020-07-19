@@ -11,12 +11,6 @@
 */
 
 .home-header {
-  border-top: 5px solid darken($color-primary, 10%);
-
-  @include mq(sm) {
-    border-top: 3px solid darken($color-primary, 10%);
-  }
-
   .site-logo {
     position: absolute;
     top: $unit-xs;
@@ -29,162 +23,80 @@
 }
 
 .body-home {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-	background-color: #F4F7F8;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f4f7f8;
+
+  @include mq(lg) {
+    display: block;
+  }
+
+  @include mq(md) {
+    display: block;
+  }
+
+  @include mq(sm) {
+    display: block;
+  }
 
   .body-home-inner {
-    flex: 1 100%;
-  	margin-left: auto;
-  	margin-right: auto;
-  	background-color: $white;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white;
 
-  	@include mq(lg) {
-  	}
+    @include mq(lg) {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+    }
 
-  	@include mq(md) {
-  	}
+    @include mq(md) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
 
-  	@include mq(sm) {
-
-  		h1 {
-  			padding-top: $unit-lg;
-  		}
-  	}
+    @include mq(sm) {
+      display: grid;
+      grid-template-columns: 1fr;
+      
+      h1 {
+        padding-top: $unit-lg;
+      }
+    }
 
     h2 {
       flex: 1 100%;
       letter-spacing: -1px;
     }
 
-    .home-body-content {
-      float: left;
-      width: 100%;
-      padding-left: 30px;
+    .body-home-left {
+      padding: .5rem 4rem 2rem 2.5rem;
+
+      @include mq(lg) {
+        padding: 0 2rem 0 2rem;
+      }
 
       @include mq(md) {
-        padding-bottom: 30px;
+        padding: 0 2rem 0 2rem;
       }
 
       @include mq(sm) {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 30px;
+        padding: 0 0 0 0;
       }
 
-      .hbc--top {
-        float: left;
-        width: 100%;
-
-        @include mq(md) {
-          padding-top: $unit-lg;
-        }
-
-        @include mq(sm) {
-          padding-top: $unit-lg;
-        }
-
-        h2 {
-          margin-top: $unit-tiny;
-        }
+      .body-text strong {
+        font-style: italic;
       }
-
-      .hbc--left {
-        float: left;
-        width: 100%;
-
-        @include mq(md) {
-          width: 100%;
-          padding-right: 0;
-        }
-
-        @include mq(sm) {
-          width: 100%;
-          padding-right: 0;
-        }
-
-        h2 {
-          margin-bottom: 0;
-        }
+  
+      .body-text span.emphasize {
+        font-style: italic;
       }
-
-      .hbc--right {
-        display: flex;
-        width: 100%;
-        padding-top: $unit-base;
-
-        img {
-          align-self: center;
-        }
-
-        .slider_1 {
-          position: relative;
-          top: 0px;
-
-          img {
-
-          }
-        }
-
-        @include mq(md) {
-          width: 310px;
-
-          .slider_1 {
-            position: relative;
-            top: 0;
-
-            img {
-
-            }
-          }
-        }
-
-        @include mq(sm) {
-          max-width: 93%;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;
-
-          .slider_1 {
-            position: relative;
-            top: 0;
-
-            img {
-
-            }
-          }
-        }
-      }
-    }
-
-    .body-text strong {
-      font-style: italic;
-    }
-
-    .body-text span.emphasize {
-      font-style: italic;
-    }
-
-    .body-home-left {
-    	padding: 2.5rem 4rem 0 0;
-
-    	@include mq(lg) {
-    		padding: 2rem 2rem 0 0;
-    	}
-
-    	@include mq(md) {
-    		padding: 2rem 2rem 0 0;
-    	}
-
-    	@include mq(sm) {
-    		padding: 0 0 0 0;
-    	}
 
       h2 {
         position: relative;
         top: -5px;
-        font-family: $font-1;
+        font-family: molde-bold;
         font-size: 30px;
         font-weight: 900;
         line-height: 140%;
@@ -192,7 +104,6 @@
       }
 
       blockquote {
-        float: left;
         max-width: 850px;
         padding-left: $base-unit;
         margin-bottom: 10px;
@@ -253,7 +164,7 @@
           &:hover {
             color: black;
           }
-        }
+        } 
       }
 
       p.body-text {
@@ -271,7 +182,7 @@
         }
 
         @include mq(sm) {
-          float: left;
+      
           width: 100%;
           margin-top: 0;
           padding: $unit-xs $unit-md;
@@ -279,32 +190,110 @@
           color: $white;
         }
       }
+
+      .hbc--top {
+        width: 100%;
+        padding-top: 25px;
+  
+        @include mq(md) {
+          padding-top: $unit-lg;
+        }
+  
+        @include mq(sm) {
+          padding-top: $unit-lg;
+        }
+  
+        h2 {
+          margin-top: $unit-tiny;
+        }
+      }
+  
+      .hbc--left {
+        width: 100%;
+        padding-bottom: $unit-xs;
+  
+        @include mq(md) {
+          width: 100%;
+          padding-right: 0;
+        }
+  
+        @include mq(sm) {
+          width: 100%;
+          padding-right: 0;
+        }
+  
+        h2 {
+          margin-bottom: 0;
+        }
+      }
+  
+      .hbc--right {
+        display: flex;
+        width: 100%;
+        padding-top: $unit-base;
+  
+        @include mq(md) {
+          width: 310px;
+  
+          .slider_1 {
+            position: relative;
+            top: 0;
+  
+            img {
+            }
+          }
+        }
+  
+        @include mq(sm) {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          padding: $unit-xs 17px 0 17px;
+          text-align: center;
+  
+          img {
+            width: 100%;
+          }
+        }
+
+        img {
+          align-self: center;
+        }
+  
+        .slider_1 {
+          position: relative;
+          top: 0px;
+  
+          img {
+          }
+        }
+      }
     }
 
     .body-home-right {
-    	padding: 1.5rem 1.25rem 2rem 1.25rem;
-    	margin-bottom: 2rem;
-    	height: auto;
-    	min-height: 62.5rem;
-    	background-color: $white;
+      padding: 1.5rem 1.25rem 2rem 1.25rem;
+      margin-bottom: 2rem;
+      height: auto;
+      min-height: 62.5rem;
+      background-color: $white;
 
-    	@include mq(md) {
-    		padding: 2rem 1rem 3rem 1rem;
-    	}
+      @include mq(md) {
+        padding: 2rem 1rem 3rem 1rem;
+      }
 
-    	@include mq(sm) {
-    		padding: 1.5rem 1rem 3rem 1rem;
-    	}
+      @include mq(sm) {
+        padding: 1.5rem 1rem 3rem 1rem;
+      }
     }
   }
 }
 
 .admin-buttons {
-	margin-top: 2rem;
+  margin-top: 2rem;
 
-	@include mq(sm) {
-		margin-top: 1rem;
-	}
+  @include mq(sm) {
+    margin-top: 1rem;
+  }
 }
 
 .lastfm {
@@ -320,42 +309,38 @@
 }
 
 .lastfm-container {
-	float: left;
-	border: 2px solid $gray;
-	background-color: $white;
+  border: 1px solid $xdark-gray;
+  background-color: $white;
 
-	@include mq (sm) {
-		width: 100%;
-	}
+  @include mq(sm) {
+    width: 100%;
+  }
 
   .widget_lastfm_widget {
-    float: left;
     width: 100%;
     padding: 15px;
 
-    .lastfm-user {
-      display: none;
-    }
-
     .lastfm-row {
-      float: left;
-      width: 100%;
+      display: grid;
+      grid-template-columns: 65px 1fr ;
       border-bottom: 1px solid #ddd;
 
       &:last-child {
         border-bottom: 0px;
       }
 
+      &.lastfm-user {
+        display: none;
+      }
+
       .lastfm-col-twenty {
-        flex: 0 0 10%;
+        max-height: 3.2rem;
       }
 
       .lastfm-col {
         position: relative;
         top: -4px;
-        float: left;
-        width: 100%;
-
+  
         small {
           font-family: $font-1;
           font-size: 13px;
@@ -373,63 +358,59 @@
     }
   }
 
-	.lastfm-title {
-		float: left;
-		width: 100%;
-		padding: 0;
-		background-color: $gray;
+  .lastfm-title {
+    display: grid;
+    grid-template-columns: 45px 1fr ;
+    padding: 0;
+    background-color: $xdark-gray;
 
-		#lastfm-title-left {
-			float: left;
-			width: 45px;
+    #lastfm-title-left {
+      width: 45px;
       padding: $unit-xxs 0 0 0;
-			text-align: center;
+      text-align: center;
 
-			@include mq(md) {
-
-			}
+      @include mq(md) {
+      }
 
       .fa {
         color: white;
         font-size: 22px;
       }
-		}
+    }
 
-		#lastfm-title-right {
-			float: left;
-			width: calc(100% - 45px);
+    #lastfm-title-right {
+      width: calc(100% - 45px);
 
-			@include mq(md) {
+      @include mq(md) {
         width: calc(100% - 45px);
-			}
+      }
 
-			h4 {
-				@include font($font-2, normal, $font-size-md, $font-weight-semibold);
-				padding: $unit-xs 0 0 0;
+      h4 {
+        @include font($font-2, normal, $font-size-md, $font-weight-semibold);
+        padding: $unit-xs 0 0 0;
         font-weight: 600;
-				color: $white;
+        color: $white;
 
-				@include mq(md) {
+        @include mq(md) {
           padding: $unit-xs 0 0 0;
-				}
+        }
 
-				@include mq(sm) {
+        @include mq(sm) {
           padding: $unit-xs 0 0 0;
-				}
-			}
-		}
-	}
+        }
+      }
+    }
+  }
 }
 
 .instagram-container {
-	float: left;
   width: 100%;
   background-color: black;
 
   h2 {
     padding-left: 30px;
-    font-weight: 800;
-    font-size: 35px;
+    font-family: molde-bold;
+    font-size: 2rem;
     line-height: 132%;
     color: white;
 
@@ -445,85 +426,87 @@
   }
 }
 
-.social-feed {
-	float: left;
-	padding: 0;
-	margin: $unit-sm 0 0 0;
-	border: 2px solid $gray;
-	background-color: $white;
+.twitter-feed {
+  margin: $unit-sm 0 0 0;
+  padding: 0;
+  border: 1px solid $xdark-gray;
+  background-color: $white;
+  max-height: 900px;
+  overflow: auto;
 
-	h2 {
-		padding: 0;
-	}
+  @include mq(sm) {
+    max-height: none;
+  }
 
-	aside {
-		padding: 0;
-	}
+  h2 {
+    padding: 0;
+  }
 
-	#twitter-feed {
-		width: 100%;
-		padding-top: $unit-xs;
-	}
+  aside {
+    padding: 0;
+  }
 
-	#twitter-title {
-    float: left;
-		width: 100%;
-		padding: 0;
-		background-color: $gray;
+  #twitter-feed {
+    width: 100%;
+    padding-top: $unit-xs;
+  }
 
-		#twitter-title-left {
-      float: left;
-			width: 45px;
+  #twitter-title {
+    display: grid;
+    grid-template-columns: 45px 1fr ;
+    width: 100%;
+    padding: 0;
+    background-color: $xdark-gray;
+
+    #twitter-title-left {  
       padding: $unit-xxs 0 0 0;
-			text-align: center;
+      text-align: center;
 
-			@include mq(md) {
-
-			}
+      @include mq(md) {
+      }
 
       .fa {
         color: white;
         font-size: 22px;
       }
-		}
+    }
 
-		#twitter-title-right {
-      float: left;
-			width: calc(100% - 45px);
+    #twitter-title-right {
+      width: calc(100% - 45px);
 
-			@include mq(md) {
+      @include mq(md) {
         width: calc(100% - 45px);
-			}
+      }
 
-			h4 {
-				@include font($font-2, normal, $font-size-md, $font-weight-semibold);
-				padding: $unit-xs 0 0 0;
+      h4 {
+        @include font($font-2, normal, $font-size-md, $font-weight-semibold);
+        padding: $unit-xs 0 0 0;
         font-weight: 600;
-				color: $white;
+        color: $white;
 
-				@include mq(md) {
+        @include mq(md) {
           padding: $unit-xs 0 0 0;
-				}
+        }
 
-				@include mq(sm) {
+        @include mq(sm) {
           padding: $unit-xs 0 0 0;
-				}
-			}
-		}
+        }
+      }
+    }
   }
 }
 
 .var-chromeless .tweet {
-	border-bottom: 1px solid $light-gray !important;
-	padding: 0rem 0rem 2rem 0rem;
+  border-bottom: 1px solid $light-gray !important;
+  padding: 0rem 0rem 2rem 0rem;
 }
 
 .my-references {
-  padding: .5rem 0 0 .5rem;
+  padding: 0.5rem 0 0 0.5rem;
   background-color: $blue-potion;
 
   @include mq(md) {
-    padding: .7rem 0 0 .5rem;
+    padding: 0.7rem 0 0 0.5rem;
   }
 
   @include mq(sm) {
@@ -552,11 +535,9 @@
   }
 
   .ref-card {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    width: 100%;
-    margin: .9rem 0 .9rem 0;
+    display: grid;
+    grid-template-columns: 200px 3fr;
+    margin: 0.9rem 0 0.9rem 0;
     padding: 1.5rem 1.2rem;
     background-color: $blue-potion;
     background-color: $blue-potion;
@@ -567,7 +548,7 @@
     }
 
     @include mq(sm) {
-      min-height: 550px;
+      grid-template-columns: 1fr;
     }
 
     .ref-card-left {
@@ -575,14 +556,11 @@
       text-align: center;
 
       @include mq(md) {
-
       }
 
       @include mq(sm) {
         display: block;
-        float: left;
         width: 100%;
-        height: 200px;
       }
 
       img {
@@ -599,11 +577,10 @@
     }
 
     .ref-card-right {
-      flex: 1;
       width: 100%;
       padding-top: 0;
       padding-right: 50px;
-      font-family: Roboto,sans-serif,Helvetica,Arial,sans-serif;
+      font-family: Roboto, sans-serif, Helvetica, Arial, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -611,20 +588,19 @@
       color: white;
 
       @include mq(md) {
-
       }
 
       @include mq(sm) {
         display: block;
-        float: left;
         width: 100%;
-        min-height: 300px;
         font-size: 15px;
         padding: 20px 20px 20px 20px;
       }
 
       strong {
         float: left;
+        width: 100%;
+        margin-top: $unit-xs;
         padding-top: $unit-sm;
         font-size: 13px;
         font-weight: 600;
@@ -633,14 +609,13 @@
   }
 }
 
-
 // YOUTUBE VIDEOS SECTION
 
 .youtube-vids {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   min-height: 100px;
-  padding-bottom: 20px;
+  padding: 1.1rem 1rem;
   background-color: $xxlight-gray;
 
   @include mq(sm) {
@@ -650,22 +625,49 @@
   }
 
   h2 {
-    flex: 1 100%;
     position: relative;
     top: -5px;
-    font-family: $font-1;
-    font-size: 30px;
-    font-weight: 900;
     text-transform: none;
 
     img {
       position: relative;
       max-width: 42px;
     }
+
+    a {
+      font-family: molde-bold;
+      font-size: 2rem;
+      color: black;
+  
+      &:hover {
+        color: lighten(black, 10%);
+      }
+    }
   }
 
-  .gallery-video-content {
-    flex: 1 100%;
+  .video-container {
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+    }
+
+    @include mq(sm) {
+    }
+
+    .sby_follow_btn a {
+      font-family: $font-1;
+      background-color: red;
+      color: white;
+      transition: all 120ms ease-in-out;
+
+      &:hover {
+        background-color: lighten(red, 15%) !important;
+        box-shadow: none;
+        transform: scale(1.05);
+      }
+    }
   }
 }
 
@@ -684,11 +686,10 @@ section #origincode_videogallery {
   }
 }
 
-
 // PORTFOLIO CSS
 
 .body-portfolio {
-  padding-bottom: 25px;
+  padding: 0 0 1.5rem 0;
   background-color: $white;
   overflow-x: hidden;
 
@@ -706,13 +707,15 @@ section #origincode_videogallery {
   }
 
   h2 {
-    flex: 1 100%;
+    display: grid;
+    grid-template-columns: 1fr;
     position: relative;
     top: 0;
     margin-top: 50px;
     margin-bottom: 20px;
-    font-family: $font-1;
-    font-size: 35px;
+    padding: 0 1rem 0 1rem;
+    font-family: molde-bold;
+    font-size: 2rem;
     font-weight: 900;
     line-height: 132%;
     text-transform: none;
@@ -730,96 +733,93 @@ section #origincode_videogallery {
     margin-right: auto;
     padding: 0 0 $unit-xl 0;
     overflow-x: hidden;
-  
+
     .masonry-container {
-      float: left;
       width: 100%;
       margin: 0 !important;
       padding: 0 !important;
       color: white !important;
       background-color: $white !important;
       overflow: hidden;
-  
+
       @include mq(sm) {
         margin-top: $unit-xs !important;
       }
-  
+
       .portfolio-item {
-        float: left;
         width: 25%;
         height: auto;
         padding: 25px $unit-xs $unit-md $unit-xs;
         background-color: $white;
-        border: 1px solid #DFDFDF;
-  
+        border: 1px solid #dfdfdf;
+
         @include mq(lg) {
           width: 33.3333%;
         }
-  
+
         @include mq(md) {
-          width: 49.90%;
+          width: 49.9%;
         }
-  
+
         @include mq(sm) {
           width: 100%;
           padding: 25px 20px $unit-md 20px;
         }
-  
+
         .button-footer {
           display: flex;
           flex-wrap: wrap;
           width: 100%;
           padding: 5px 0 0 5px;
-  
+
           a {
             @include mq(sm) {
-              float: left;
               width: 48%;
               padding: $unit-xs $unit-sm;
             }
-  
+
             margin-right: 5px;
-          
+
             &.btn-link--details {
               background-color: $green-potion;
               color: $black;
               border: 1px solid $green-potion;
-          
+
               &:hover {
                 background-color: lighten($green-potion, 15%);
                 color: $black;
                 border: 1px solid lighten($green-potion, 15%);
               }
             }
-          
+
             &.btn-link--site {
               background-color: $blue-potion;
               color: $white;
               border: 1px solid $blue-potion;
-          
+
               &:hover {
                 background-color: darken($blue-potion, 15%);
                 color: $white;
                 border: 1px solid darken($blue-potion, 15%);
               }
             }
-          
+
             &.btn-link--behance {
               background-color: $green-potion;
               color: $black;
               border: 1px solid $green-potion;
-          
+
               &:hover {
                 background-color: lighten($green-potion, 15%);
                 border: 1px solid lighten($green-potion, 15%);
               }
             }
-          
+
             &.btn-link--github {
               background-color: $medium-gray;
               color: $white;
               border: 1px solid $medium-gray;
-          
+
               &:hover {
                 background-color: darken($medium-gray, 15%);
                 color: $white;
@@ -827,12 +827,12 @@ section #origincode_videogallery {
               }
             }
           }
-  
+
           .button-secondary {
             margin-left: $unit-xs;
           }
         }
-  
+
         .portfolio-new-label {
           position: absolute;
           top: 12px;
@@ -844,7 +844,7 @@ section #origincode_videogallery {
           font-weight: 600;
           text-transform: uppercase;
         }
-  
+
         &.new {
           &:after {
             content: "NEW";
@@ -861,19 +861,12 @@ section #origincode_videogallery {
             color: white;
           }
         }
-  
-        h1, h2, h3, h4, h5, h6 {
-          font-family: $font-1;
-          text-align: left;
-        }
 
         h2 {
-          display: flex;
-          flex-wrap: wrap;
-          flex: 1 100%;
+          display: grid;
+          grid-template-columns: 1fr;
           margin: 0 0 $unit-tiny 0;
           padding-left: $unit-tiny;
-          font-family: Roboto;
           font-size: 20px;
           font-weight: 800;
           letter-spacing: -1px;
@@ -881,10 +874,10 @@ section #origincode_videogallery {
           color: black;
           line-height: 140%;
         }
-  
+
         h3 {
-          display: flex;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: 1fr;
           flex: 1 100%;
           margin-bottom: 5px;
           padding: 0 20px 0 $unit-tiny;
@@ -894,24 +887,20 @@ section #origincode_videogallery {
           line-height: $base-line-height;
           color: $black;
           text-transform: none;
-  
+
           @include mq(lg) {
-  
-           }
-  
-          @include mq(md) {
-  
           }
-  
+
+          @include mq(md) {
+          }
+
           @include mq(sm) {
-  
           }
         }
-  
+
         h4 {
-          display: flex;
-          flex-wrap: wrap;
-          flex: 1 100%;
+          display: grid;
+          grid-template-columns: 1fr;
           margin-top: $unit-tiny;
           margin-bottom: $unit-tiny;
           padding: 0 $unit-base 0 $unit-tiny;
@@ -922,21 +911,20 @@ section #origincode_videogallery {
           line-height: $base-line-height;
           color: $black;
           text-transform: none;
-  
+
           @include mq(md) {
             font-size: 17px;
           }
-  
+
           @include mq(sm) {
             font-size: 17px;
             font-weight: bold;
           }
         }
-  
+
         h5 {
-          display: flex;
-          flex-wrap: wrap;
-          flex: 1 100%;
+          display: grid;
+          grid-template-columns: 1fr;
           padding: 0 $unit-base 0 5px;
           font-family: $font-1;
           font-size: $font-size-base;
@@ -944,21 +932,21 @@ section #origincode_videogallery {
           line-height: $base-line-height;
           color: #888;
           text-transform: none;
-  
+
           @include mq(md) {
             font-size: $font-size-sm;
           }
-  
+
           @include mq(sm) {
             font-size: $font-size-sm;
           }
         }
-  
+
         a {
           font-size: $font-size-sm;
           text-decoration: none;
         }
-  
+
         .image {
           padding: 5px;
         }
@@ -967,17 +955,17 @@ section #origincode_videogallery {
   }
 }
 
-
 .orbit-container {
   position: relative;
-  height: auto !important;
-  min-height: 240px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(120px, auto);
   z-index: 998;
 
-  button.orbit-previous, button.orbit-next  {
+  button.orbit-previous,
+  button.orbit-next {
     position: absolute;
     top: 100px !important;
-    float: left;
     display: block;
     width: auto;
     min-width: 0;
@@ -1000,13 +988,21 @@ section #origincode_videogallery {
     }
   }
 
+  .orbit-slide {
+    @include mq(md) {
+    }
+
+    @include mq(sm) {
+    }
+  }
+
   button.orbit-previous {
-    left: 10px;
+    left: $unit-xs;
     right: initial;
   }
 
   button.orbit-next {
-    right: 10px;
+    right: $unit-xs;
     left: initial;
   }
 }
@@ -1014,7 +1010,6 @@ section #origincode_videogallery {
 // CONTACT SECTION CSS
 
 div.wpcf7 {
-  float: left;
   width: 100%;
   padding-left: 18px;
 
@@ -1032,50 +1027,46 @@ div.wpcf7 {
 }
 
 .wpcf7-form-control-wrap {
-  float: left;
   width: 100%;
   margin-top: $unit-xs;
 }
 
 .body-contact {
-  margin-bottom: $unit-lg;
   padding-top: 25px;
-  padding-bottom: $unit-xxl;
   background-color: $white;
 
   @include mq(sm) {
-		top: $unit-xs;
+    top: $unit-xs;
 
-		.my-info-mobile {
-			display: none;
-		}
+    .my-info-mobile {
+      display: none;
+    }
   }
 }
 
 .body-contact-inner {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 0 $unit-xl 0;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  padding: 0;
   background-color: $white;
 
   @include mq(lg) {
- 		width: 90%;
+
   }
 
   @include mq(md) {
- 		width: 100%;
+    display: block;
+    padding: 0 25px;
   }
 
   @include mq(sm) {
- 		width: 95%;
+    display: block;
+    padding: 0 25px;
   }
 }
 
 .body-contact-left {
-	float: left;
-  width: 500px;
-	padding: 0 $unit-sm 0 0;
+  padding: 0 $unit-sm 0 0;
   text-align: left;
 
   @include mq(lg) {
@@ -1087,22 +1078,21 @@ div.wpcf7 {
     padding: 0 $unit-sm 0 $unit-xl;
   }
 
-	@include mq(sm) {
+  @include mq(sm) {
     width: 100%;
     padding: 0 $unit-sm 0 $unit-sm;
-		text-align: center;
-	}
+    text-align: center;
+  }
 
   .contact-info-container {
-    float: left;
     width: 100%;
 
     h2 {
       position: relative;
       top: 0;
       padding-left: 30px;
-      font-family: $font-1;
-      font-size: 30px;
+      font-family: molde-bold;
+      font-size: 2rem;
       font-weight: 900;
       line-height: 140%;
       text-transform: none;
@@ -1110,28 +1100,25 @@ div.wpcf7 {
       @include mq(md) {
         padding-left: 0;
       }
-    
+
       @include mq(sm) {
         padding-left: 0;
       }
     }
 
     @include mq(xl) {
-
     }
 
     @include mq(lg) {
-
     }
 
     @include mq(md) {
-      float: left;
       min-width: none;
       max-width: none;
     }
 
     @include mq(sm) {
-      float: left;
+  
       min-width: none;
       max-width: none;
     }
@@ -1142,14 +1129,13 @@ div.wpcf7 {
       @include mq(md) {
         padding-left: 0;
       }
-    
+
       @include mq(sm) {
         padding-left: 0;
       }
     }
 
     p {
-      float: left;
       width: 100%;
       line-height: $base-line-height;
 
@@ -1178,7 +1164,6 @@ div.wpcf7 {
 
       &.address {
         @include mq(sm) {
-
         }
       }
     }
@@ -1194,7 +1179,6 @@ div.wpcf7 {
     }
 
     .contact-email {
-      float: left;
       width: 100%;
       margin-top: 3px;
       padding-left: 30px;
@@ -1202,13 +1186,12 @@ div.wpcf7 {
       @include mq(md) {
         padding-left: 0;
       }
-    
+
       @include mq(sm) {
         padding-left: 0;
       }
 
       a {
-        float: left;
         width: 100%;
 
         &:before {
@@ -1222,79 +1205,70 @@ div.wpcf7 {
     }
   }
 
-	.contact-page-email-btn a {
-		@include mq(sm) {
-			width: 100%;
+  .contact-page-email-btn a {
+    @include mq(sm) {
+      width: 100%;
       margin-top: $unit-xl;
-			font-size: 1rem !important;
-		}
-	}
+      font-size: 1rem !important;
+    }
+  }
 
-	.google-map {
-		float: left;
-		width: 100%;
-		margin: $unit-xxs 0 0 0;
+  .google-map {
+    width: 100%;
+    margin: $unit-xxs 0 0 0;
 
     @include mq(lg) {
-
     }
 
     @include mq(md) {
-
     }
 
     @include mq(sm) {
       margin: $unit-xxs 0 0 0;
     }
 
-		iframe {
-			width: 250px;
-			height: 250px;
-			background-color: $white;
-			padding: 7px;
-			-moz-box-shadow: 0 0 6px #444;
-			-webkit-box-shadow: 0 3px 6px #444;
-			box-shadow: 0 0 6px #444;
+    iframe {
+      width: 250px;
+      height: 250px;
+      background-color: $white;
+      padding: 7px;
+      -moz-box-shadow: 0 0 6px #444;
+      -webkit-box-shadow: 0 3px 6px #444;
+      box-shadow: 0 0 6px #444;
 
-			@include mq(lg) {
-				width: 275px;
-				height: 275px;
-			}
+      @include mq(lg) {
+        width: 275px;
+        height: 275px;
+      }
 
-			@include mq(md) {
-				width: 240px;
-				height: 240px;
-			}
+      @include mq(md) {
+        width: 240px;
+        height: 240px;
+      }
 
-			@include mq(sm) {
-				width: 100%;
-			}
-		}
-	}
+      @include mq(sm) {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .body-contact-right {
-  float: left;
-  width: calc(100% - 500px);
-	padding: $unit-base $unit-base 50px $unit-base;
+  padding: $unit-base $unit-base 50px $unit-base;
 
   @include mq(xl) {
-
   }
 
   @include mq(lg) {
-
   }
 
-	@include mq(md) {
-    width: 100%;
-		padding: 0 0 $unit-lg 20px;
+  @include mq(md) {
+    padding: 0 0 $unit-lg 20px;
   }
 
-	@include mq(sm) {
-    width: 100%;
-		padding: 0 0 $unit-lg 0;
-	}
+  @include mq(sm) {
+    padding: 0 0 $unit-lg 0;
+  }
 
   h2 {
     font-size: 30px;
@@ -1307,38 +1281,14 @@ div.wpcf7 {
     border: 0;
   }
 
-  .btn-secondary {
-
-  }
-  .btn-gray {
-
-  }
-
-  .body-text {
-    max-width: 1100px;
-
-    @include mq(lg) {
-      padding-left: 15px;
-    }
-
-    @include mq(md) {
-      padding-left: 15px;
-    }
-
-    @include mq(sm) {
-      padding-left: 15px;
-    }
+  .contact-blurb {
+    font-size: $font-size-lg;
+    line-height: $base-line-height;
+    margin: 0 0 $unit-base 0;
   }
 
-	.contact-blurb {
-		font-size: $font-size-lg;
-		line-height: $base-line-height;
-		margin: 0 0 $unit-base 0;
-	}
-
-	.contact-button-container {
-		float: left;
-		margin: $unit-base 0;
+  .contact-button-container {
+    margin: $unit-base 0;
 
     .btn {
       @include mq(sm) {
@@ -1357,7 +1307,7 @@ div.wpcf7 {
         margin-top: $unit-xs;
       }
     }
-	}
+  }
 
   label {
     font-weight: 600;
@@ -1368,56 +1318,53 @@ div.wpcf7 {
     }
   }
 
-	input {
-		float: left;
-		width: 100%;
-    max-width: 600px;
-    margin: 0;
-		padding: 7px $unit-xxs 7px 8px;
-		border: 1px solid $light-gray;
-		border-radius: 0;
+  input {
+    width: 100%;
+    max-width: 500px;
+    margin: .4rem 0 1rem 0;
+    padding: 7px $unit-xxs 7px 8px;
+    border: 1px solid $light-gray;
+    border-radius: 0;
     box-shadow: none;
 
-		&:focus {
-			-moz-box-shadow: 0 0 6px $color-primary;
-			-webkit-box-shadow: 0 3px 6px $color-primary;
-			box-shadow: 0 0 6px $color-primary;
-			border: none;
-		}
+    &:focus {
+      -moz-box-shadow: 0 0 6px $color-primary;
+      -webkit-box-shadow: 0 3px 6px $color-primary;
+      box-shadow: 0 0 6px $color-primary;
+      border: none;
+    }
 
-		@include mq(md) {
-			width: 90%;
-		}
+    @include mq(md) {
+      width: 90%;
+    }
 
-		@include mq(sm) {
-			width: 100%;
-		}
-	}
+    @include mq(sm) {
+      width: 100%;
+    }
+  }
 
-	textarea  {
-		float: left;
-		clear: both;
-		width: 90%;
-		min-height: 180px;
+  textarea {
+    clear: both;
+    width: 90%;
+    min-height: 180px;
     font-size: 14px;
-		padding: 17px 15px;
-		border: 1px solid $light-gray;
-		border-radius: 0;
+    margin: .4rem 0 1rem 0;
+    padding: 17px 15px;
+    border: 1px solid $light-gray;
+    border-radius: 0;
 
-		@include mq(md) {
-			width: 90%;
-		}
+    @include mq(md) {
+      width: 90%;
+    }
 
-		@include mq(sm) {
-			width: 100%;
-		}
-	}
+    @include mq(sm) {
+      width: 100%;
+    }
+  }
 
   .wpcf7-submit {
-    float: left;
     width: auto;
     min-width: $unit-jumbo;
-    margin-top: $unit-md;
     padding: $unit-sm $unit-lg;
     border: 2px solid $color-primary;
     border-radius: 0;
@@ -1431,7 +1378,7 @@ div.wpcf7 {
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     display: block;
 
     &:hover {
@@ -1446,12 +1393,7 @@ div.wpcf7 {
     }
   }
 
-  .wpcf7 .ajax-loader {
-    float: left;
-  }
-
   .wpcf7-response-output {
-    float: left;
     width: 100%;
     margin: $unit-md 0 0 0;
     padding: $unit-xs $unit-md;
@@ -1469,7 +1411,6 @@ div.wpcf7 {
   }
 
   .wpcf7-form label {
-    float: left;
     width: 100%;
     margin: $unit-sm 0 0 0;
     font-family: $font-1;
@@ -1478,7 +1419,6 @@ div.wpcf7 {
   }
 
   .wpcf7-not-valid-tip {
-    float: left;
     width: 100%;
     margin: $unit-xs 0 0 0;
   }
@@ -1488,7 +1428,7 @@ div.wpcf7 {
   padding-left: $unit-sm;
 
   label {
-    float: left;
+
     width: 100%;
   }
 
@@ -1510,21 +1450,472 @@ div.wpcf7 {
   }
 }
 
-.video-wrapper {
-  padding: 5px;
-}
-
-iframe{
+iframe {
   width: 31vw;
-  height: calc(100vw/5.2);
+  height: calc(100vw / 5.2);
 
   @include mq(md) {
     width: 47vw;
-    height: calc(100vw/4)
+    height: calc(100vw / 4);
   }
 
   @include mq(sm) {
     width: 98vw;
-    height: calc(100vw/1.7)
+    height: calc(100vw / 1.7);
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############# BEGIN CUSTOM MEDIA QUERIERS ############### */
+
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+  .superhero .sh--inner .my-pic {
+    width: 100%;
+
+    .svg-container {
+
+    }
+  }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+  
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+  
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Google Pixel ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- HTC One ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy Tab 2 ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+
+}
+
+/* Portrait */
+@media 
+  (max-device-width: 800px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media 
+  (max-device-width: 1280px) 
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- Galaxy Tab S ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media 
+  (max-device-width: 800px) 
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Landscape */
+@media 
+  (max-device-width: 1280px) 
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* ----------- Nexus 7 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Nexus 9 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 1536px) 
+  and (device-height: 2048px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: portrait) {
+
+    .superhero .sh--inner .my-pic {
+      width: 100%;
+  
+      .svg-container {
+  
+      }
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 1536px) 
+  and (device-height: 2048px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: landscape) {
+
 }

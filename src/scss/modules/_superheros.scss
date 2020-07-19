@@ -13,8 +13,8 @@
 
 .superhero {
   position: relative;
-  float: left;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
   min-height: 240px;
   background-size: cover;
 
@@ -48,21 +48,15 @@
     }
 
     @include mq(lg) {
-      left: 3%;
-      right: 3%;
-      width: 94%;
+
     }
 
     @include mq(md) {
-      left: 0;
-      right: 0;
-      width: 100%;
+
     }
 
     @include mq(sm) {
-      min-height: 350px;
-      padding-bottom: 15px;
-      text-align: center;
+
     }
 
     .my-pic {
@@ -71,9 +65,9 @@
 
       img {
         position: relative;
-        top: $unit-xs;
-        left: 30px;
-        max-width: 170px !important;
+        top: 26px;
+        left: 53px;
+        max-width: 150px !important;
         padding-top: $unit-base;
         text-align: right;
       }
@@ -84,8 +78,9 @@
       }
 
       @include mq(sm) {
-        float: left;
         width: 100%;
+        display: block;
+        grid-template-columns: 1fr;
         text-align: center;
 
         img {
@@ -124,14 +119,11 @@
       }
 
       h1 {
-        float: left;
-        width: 100%;
-        font-family: $font-1;
-        font-size: $h1-size;
-        font-weight: 900;
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 3rem;
         color: white;
         text-transform: none;
-        text-shadow: 6px 7px 1px darken($color-primary, 10%);
 
         @include mq(md) {
           font-size: 35px;
@@ -143,21 +135,18 @@
       }
 
       h2 {
-        float: left;
-        width: 100%;
         margin-top: 0;
         margin-bottom: $unit-tiny;
-        font-family: $font-1;
-        font-size: 2rem;
+        font-size: 1.7rem;
         color: $white;
         line-height: 130%;
 
         @include mq(lg) {
-          font-size: 1.8rem;
+          font-size: 1.7rem;
         }
 
         @include mq(md) {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
 
         @include mq(sm) {
@@ -166,30 +155,30 @@
       }
 
       p.quote {
-        float: left;
-        width: 100%;
-        max-width: 1400px;
-        padding-right: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        padding-right: 3rem;
         font-family: $font-2;
-        font-size: 18px;
+        font-size: 1rem;
         color: white;
         line-height: 135%;
 
         @include mq(md) {
           padding-right: 0;
-          font-size: 15px;
+          font-size: 1rem;
         }
 
         @include mq(sm) {
           padding-top: 10px;
           padding-right: 0;
-          font-size: 15px;
+          font-size: 1rem;
         }
       }
 
       p.quotee {
-        float: left;
-        width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
         margin-top: $unit-base;
         font-size: 20px;
         font-style: italic;
@@ -208,7 +197,10 @@
   }
 
   &.superhero-home {
-    background-color: blue;
+    padding-top: $unit-xs;
+    background-image: url("../img/superheroes/superhero-background.jpg");
+    background-size: cover;
+    background-position: 0px 45%;
 
     p.quotee {
       color: $color-primary !important;

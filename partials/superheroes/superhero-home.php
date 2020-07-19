@@ -3,14 +3,14 @@
   <section class="sh--inner">
     <div class="my-pic">
       <section class="svg-container svg-container-home">
-				<img src='<?php bloginfo( 'template_directory' ); ?>/img/profile-pic__electric-blue.jpg' alt="Profile Pic">
+				<img src='<?php bloginfo( 'template_directory' ); ?>/img/superheroes/cartoon-me.png' alt="Profile Pic">
       </section>
     </div>
 
     <div class="my-info">
       <h1>Thomas Wicker</h1>
       <h2>Full Stack Designer & Content Creator</h2>
-      <p class="quote">Code monkey, UX specialist, $AAPL enthusiast, lifelong learner, entrepreneur, gambler, golfer, fine artist, photographer, father of two healthy girls.</p>
+      <p class="quote">UX specialist, software developer, YouTuber, $AAPL enthusiast , lifelong learner, entrepreneur, gambler, golfer, fine artist 🎨, photographer, cook 🌮, and father of two healthy girls.</p>
     </div>
   </section>
 

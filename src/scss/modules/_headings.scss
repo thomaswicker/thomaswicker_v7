@@ -18,7 +18,8 @@ h1, h2, h3, h4, h5 ,h6 {
 }
 
 h1 {
-  @include font($font: $font-2, $style: normal, $size: $h1-size, $weight: normal);
+  font-family: molde-black;
+  font-size: 2rem;
 
   &.subheader {
     text-transform: uppercase;
@@ -29,7 +30,8 @@ h1 {
 }
 
 h2 {
-  @include font($font: $font-1, $style: normal, $size: 2rem, $weight: 300);
+  font-family: molde-black;
+  font-size: 2rem;
 
   &.subheader {
     font-weight: $font-weight-ultra;

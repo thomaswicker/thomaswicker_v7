@@ -20,7 +20,7 @@ $light-gray:        #B5B5B5;
 $gray:              #949494;
 $medium-gray:       #777777;
 $dark-gray:         #444444;
-$xdark-gray:        #222222;
+$xdark-gray:        #292929;
 $xxdark-gray:       #111111;
 $black:             #000000;
 
@@ -75,6 +75,46 @@ $font-size: $font-size-base;
 
 //Font Family Variables
 
+@font-face {
+   font-family: 'molde-medium';
+   src: url('../fonts/molde-medium-webfont.woff2') format('woff2'),
+        url('../fonts/molde-medium-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'molde-semibold';
+   src: url('../fonts/molde-semibold-webfont.woff2') format('woff2'),
+        url('../fonts/molde-semibold-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'molde-bold';
+   src: url('../fonts/molde-bold-webfont.woff2') format('woff2'),
+        url('../fonts/molde-bold-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'molde-heavy';
+   src: url('../fonts/molde-heavy-webfont.woff2') format('woff2'),
+        url('../fonts/molde-heavy-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'molde-black';
+   src: url('../fonts/molde-black-webfont.woff2') format('woff2'),
+        url('../fonts/molde-black-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
 //custom font family
 $font-1: 'Roboto', Arial, Helvetica, sans-serif;
 
@@ -82,15 +122,16 @@ $font-1: 'Roboto', Arial, Helvetica, sans-serif;
 $font-2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
 //serif font family
-$font-3: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;;
+$font-3: 'Anton', sans-serif;
 
 //often used for code blocks
 $font-4: FontAwesome;
 
+$font-5: 'Anton', sans-serif;
+
 $body-text: $font-size-md;
 $body-text-small: $font-size-sm;
 $body-text-large: $font-size-lg;
-
 
 /* ==========================================================================
    %% Headers h1,h2,h3,h4,h5,h6 %%

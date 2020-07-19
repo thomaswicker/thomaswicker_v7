@@ -4,7 +4,7 @@
 
 <section id="body-single-recipe" itemscope itemtype="http://schema.org/Recipe" class=" medium-12 body-single-recipe" role="main">
 	<section class="bsr--inner">
-		<div class="bsr--left large-8 medium-6 small-12 columns">
+		<div class="bsr--left">
 			<a href="http://www.thomaswicker.com/culinary" class="btn btn-secondary btn-mini back-btn hide-for-print">
 				<i class="fa fa-arrow-left" aria-hidden="true"></i>
 				Back to Recipes
@@ -62,7 +62,7 @@
 			<?php endif; ?>
 		</div>
 
-		<div class="bsr--right large-4 medium-6 small-12 columns">
+		<div class="bsr--right">
 			<article class="recipe-item-single recipe-item-first">
 
 				<section class="recipe-details">

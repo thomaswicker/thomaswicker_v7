@@ -1,4 +1,4 @@
-  <div class='medium-12 columns body-portfolio-inner'>
+  <div class='body-portfolio-inner'>
     <div class='masonry-container transitions-enabled infinite-scroll clearfix' id='masonry-container'>
 
       <?php

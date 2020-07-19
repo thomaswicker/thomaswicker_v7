@@ -7,9 +7,6 @@ function my_init() {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', false, '2.24', true);
 		wp_enqueue_script('jquery');
-
-		// load a JS file from my theme: js/theme.js
-		wp_enqueue_script('my_script', get_bloginfo('template_url') . '/js/theme.js', array('jquery'), '1.0', true);
 	}
 }
 add_action('init', 'my_init');
@@ -20,10 +17,8 @@ add_filter( 'jetpack_enable_open_graph', '__return_false' );
 
 function theme_styles() {
   wp_enqueue_style( 'main1', get_template_directory_uri() . '/style.css' );
-  wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.min.css' );
   wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/bower_components/components-font-awesome/css/font-awesome.min.css' );
   wp_enqueue_style( 'foundation-motion', get_template_directory_uri() . '/bower_components/motion-ui/dist/motion-ui.min.css' );
-  wp_enqueue_style( 'lightbox2', get_template_directory_uri() . '/bower_components/lightbox2/dist/css/lightbox.min.css' );
   wp_enqueue_style( 'main', get_template_directory_uri() . '/css/application.min.css' );
 }
 
@@ -37,19 +32,16 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 function theme_js() {
     wp_register_script( 'motion-ui', get_template_directory_uri() . '/bower_components/motion-ui/dist/motion-ui.min.js',array('jquery') );
     wp_register_script( 'foundationjs', get_template_directory_uri() . '/js/foundation.min.js',array('jquery') );
-    wp_register_script( 'lightboxjs', get_template_directory_uri() . '/bower_components/lightbox2/dist/js/lightbox.min.js',array('jquery') );
     wp_register_script( 'masonryjs', get_template_directory_uri() . '/bower_components/masonry/dist/masonry.pkgd.min.js',array('jquery') );
     wp_register_script( 'appjs', get_template_directory_uri() . '/js/application.min.js',array('jquery') );
 
     wp_enqueue_script( 'foundationjs' );
     wp_enqueue_script( 'motion-ui' );
-    wp_enqueue_script( 'lightboxjs' );
     wp_enqueue_script( 'masonryjs' );
     wp_enqueue_script( 'appjs' );
 }
 
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
-
   if (empty($pagerange)) {
     $pagerange = 2;
   }
@@ -141,26 +133,6 @@ if (function_exists('register_sidebar')) {
   register_sidebar(array(
     'name' => 'lastfm',
     'id'   => 'thomaswicker-sidebar',
-    'description'   => 'This is a widgetized area.',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h4>',
-    'after_title'   => '</h4>'
-  ));
-
-  register_sidebar(array(
-    'name' => 'instagram',
-    'id'   => 'instagram-sidebar',
-    'description'   => 'This is a widgetized area.',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h4>',
-    'after_title'   => '</h4>'
-  ));
-
-  register_sidebar(array(
-    'name' => 'alt-sidebar',
-    'id'   => 'alt-sidebar',
     'description'   => 'This is a widgetized area.',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget'  => '</div>',
